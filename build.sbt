@@ -9,7 +9,8 @@ scalaVersion := "2.11.6"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs
+  javaWs,
+  "be.objectify" %% "deadbolt-java" % "2.4.1"
 )
 
 // Play provides two styles of routers, one expects its actions to be injected, the
@@ -17,4 +18,4 @@ libraryDependencies ++= Seq(
 routesGenerator := InjectedRoutesGenerator
 
 
-fork in run := true
+fork in run := false //for debugging
